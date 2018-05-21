@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300|Roboto+Slab');
+
+body {
+    background-color: rgb(252, 166, 180);
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 2% 24%;
+	padding: 2% 0;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    background-color: #1E311B;
+    border: 1px solid #1E311B;
+    padding: 2% 5%;
+    margin: 6% 8%;
+    color: #FFF;
+    transition: background-color 250ms, color 250ms;
+	-webkit-transition: background-color 250ms, color 250ms;
+	-moz-transition: background-color 250ms, color 250ms;
+	-o-transition: background-color 250ms, color 250ms;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color:  rgb(252, 166, 180);
+    color: #1E311B;
+}
+
+.title {
+    font-size: 2em;
+    color: #1E311B;
+}
+
+.result {
+    margin: 4%;
+}
+
+.results-text {
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 4em;
+}
+
+#line-1 {
+	color: rgba(30, 49, 24, 0);
+	animation: fade-in 750ms forwards;
+	-webkit-animation: fade-in 750ms forwards;
+	-moz-animation: fade-in 750ms forwards;
+	-o-animation: fade-in 750ms forwards;
+}
+
+#line-2 {
+	color: rgba(30, 49, 24, 0);
+	animation: fade-in 750ms 750ms forwards;
+	-webkit-animation: fade-in 750ms 750ms forwards;
+	-moz-animation: fade-in 750ms 750ms forwards;
+	-o-animation: fade-in 750ms 750ms forwards;
+}
+
+#try-again {
+	opacity: 0;
+	animation: btn-fade-in 750ms 2s forwards;
+	-webkit-animation: btn-fade-in 750ms 2s forwards;
+	-moz-animation: btn-fade-in 750ms 2s forwards;
+	-o-animation: btn-fade-in 750ms 2s forwards;
+}
+
+@keyframes fade-in {
+	0% {color: rgba(30, 49, 24, 0);}
+	100% {color: rgba(30, 49, 24, 1);}
+}
+
+@keyframes btn-fade-in {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}

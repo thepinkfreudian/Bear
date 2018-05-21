@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <span class="title">What kind of bear is best?</span>
+            </div>
+            <div class="options">
+                <button class="btn" id="btn-1"><span>Polar</span></button>
+                <button class="btn" id="btn-2"><span>Grizzly</span></button>
+                <button class="btn" id="btn-3"><span>Black</span></button>
+            </div>
+            <div class="result" id="result-div">
+                <span class="results-text" id="line-1">False.</span><br>
+                <span class="results-text" id="line-2">Black Bear.</span>
+				<button class="btn" id="try-again">Try Again</button>
+            </div>
+            <div id ="debug"></div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#result-div').hide();
+                var choices = ['Grizzly', 'Polar', 'Black']
+                var buttons = $('.btn span');
+
+                buttons.click(function() {
+					$('#result-div').show();
+                    var text = $(this).text();
+                    if (text == 'Black') {
+						$(this).text('Teddy');
+                    }
+                });
+				
+				$('#try-again').click(function() {
+					$('#result-div').hide();
+					switchButtonText();
+				});
+				
+				function random(max) {
+					var random = Math.floor(Math.random() * max);
+					return random
+				}
+                
+                function switchButtonText(button) {
+					var used = [];
+					while (used.length < buttons.length) {
+						var i = 0;
+						var randInt = random(buttons.length);
+						if (used.indexOf(randInt) == -1) {
+							used.push(randInt);
+							i++;
+						}
+					}
+					
+					for (var i = 0; i < buttons.length; i++) {
+						var x = used[i];
+						buttons.eq(i).text(choices[x]);
+					}
+				}				
+            });
+        </script>
+    </body>
+</html>
