@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="styles.css" type="text/css">
         <script src="jquery.js"></script>
-	    <title>What Kind of Bear is Best?</title>
+	<title>What Kind of Bear is Best?</title>
     </head>
     <body>
         <div class="container">
@@ -17,9 +17,8 @@
             <div class="result" id="result-div">
                 <span class="results-text" id="line-1">False.</span><br>
                 <span class="results-text" id="line-2">Black Bear.</span>
-				<button class="btn" id="try-again">Try Again</button>
+		<button class="btn" id="try-again">Try Again</button>
             </div>
-            <div id ="debug"></div>
         </div>
         <script>
             $(document).ready(function() {
@@ -45,7 +44,7 @@
 					return random
 				}
                 
-                function switchButtonText(button) {
+                function switchButtonText() {
 					var used = [];
 					while (used.length < buttons.length) {
 						var i = 0;
