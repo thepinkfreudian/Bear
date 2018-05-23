@@ -8,8 +8,8 @@ body {
 
 .container {
     max-width: 960px;
-    margin: 2% 24%;
-	padding: 2% 0;
+    margin: 2% auto;
+    padding: 2% 0;
 }
 
 .btn {
@@ -21,9 +21,9 @@ body {
     margin: 6% 8%;
     color: #FFF;
     transition: background-color 250ms, color 250ms;
-	-webkit-transition: background-color 250ms, color 250ms;
-	-moz-transition: background-color 250ms, color 250ms;
-	-o-transition: background-color 250ms, color 250ms;
+    -webkit-transition: background-color 250ms, color 250ms;
+    -moz-transition: background-color 250ms, color 250ms;
+    -o-transition: background-color 250ms, color 250ms;
 }
 
 .btn:hover {
